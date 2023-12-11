@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{Base :: layout(~{::section})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div id="fullscreen_bg" class="fullscreen_bg">
+
+            <div class="container">
+
+                <form class="form-signin" method="post" accept="#" th:action="@{/dologin}">
+                    <h1 class="form-signin-heading text-muted">Sign In</h1>
+                    <div th:if="${param.error}" class="alert alert-danger">
+                        Invalid Username and Password
+                    </div>
+                    <div th:if="${param.logout}" class="alert alert-danger">
+                        Successfully Logged out
+                    </div>
+                    <input type="text" class="form-control" placeholder="Email address" required="" autofocus=""
+                        name="username">
+                    <input type="password" class="form-control" placeholder="Password" required="" name="password">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                        Sign In
+                    </button>
+                    <button class="btn btn-lg btn-success btn-block" style="margin-left: 49px;">
+                        <a style="text-decoration:none;color: azure;" href="/signup">
+                            Sign UP
+                        </a></button>
+                </form>
+
+            </div>
+        </div>
+        <script>
+			$(document).ready(()=>{
+				$('.item').removeClass('active');
+				$('#base-login').addClass("active");
+			});
+		</script>
+
+    </section>
+
+</body>
+
+</html>

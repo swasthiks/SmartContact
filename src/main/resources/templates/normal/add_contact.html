@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{normal/Base :: layout(~{::section})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD CONTACT</title>
+</head>
+
+<body>
+    <section>
+        <div class="card mt-0 ml-3">
+            <div class="card-body">
+                <h1 class="text-center ">Add Contact</h1>
+                <div class="container-fluid mt-1">
+                    <div class="row">
+                        <div>
+                            <form action="#" th:object="${contact}" enctype="multipart/form-data" method="post"
+                                th:action="@{/user/process-contact}" class="mt-2 ml-0">
+                                <!-- FirstNam -->
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="name" placeholder="Enter name" class="form-control"
+                                        style="height: 30px;border-radius: 6px;margin-left: 10px;" />
+                                </div>
+                                <div class="input-group " style="margin-top: 3px;">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="secondName" placeholder="Enter secondName"
+                                        class="form-control"
+                                        style="height: 30px;border-radius: 6px;margin-left: 10px;" />
+                                </div>
+                                <div class="input-group " style="margin-top: 3px;">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-briefcase"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="work" placeholder="Enter work" class="form-control"
+                                        style="height: 30px;border-radius: 6px;margin-left: 10px;" />
+                                </div>
+                                <div class="input-group " style="margin-top: 3px;">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <input type="email" name="email" placeholder="Enter email" class="form-control"
+                                        style="height: 30px;border-radius: 6px;margin-left: 10px;" />
+                                </div>
+                                <div class="input-group " style="margin-top: 3px;">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-phone-volume"></i>
+                                        </div>
+                                    </div>
+                                    <input type="number" name="phoneString" placeholder="Enter Phone number"
+                                        class="form-control"
+                                        style="height: 30px;border-radius: 6px;margin-left: 10px;" />
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea name="description" rows="10" class="form-control"
+                                        id="mytextarea">Enter Details</textarea>
+                                </div>
+                                <div class="custom-file mt-3">
+                                    <input type="file" name="profileImage">
+                                </div>
+                                <div class="container text-center">
+                                    <button class="btn btn-outline-primary">Save Contact</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+        <script>
+            tinymce.init({
+                selector: '#mytextarea'
+            });
+        </script>
+    <script>
+        $(document).ready(()=>{
+            $('.item').removeClass('active');
+            $('#add-link').addClass("active");
+        });
+    </script>
+    </section>
+</body>
+
+</html>

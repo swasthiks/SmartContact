@@ -1,0 +1,180 @@
+body {
+    background-color: rgb(193, 190, 196);
+}
+
+.bg-primaryy {
+    background-color:rgb(143, 32, 32);
+}
+
+.banner {
+    width: 100%;
+    height: 90vh;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .2)), url(../image/image.jpg);
+    background-size: cover;
+}
+
+.my-card {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.aa {
+
+    background-color: #eee;
+}
+
+.fullscreen_bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('http://31.media.tumblr.com/ad65726441493f47e0c8f0473206f4e5/tumblr_mvwl4fCEb21rdpk23o1_1280.jpg');
+}
+
+.back {
+    bottom: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    background-image: url('https://static9.depositphotos.com/1554103/1168/i/450/depositphotos_11688404-stock-photo-blue-circle-gradient-background-cuci.jpg');
+}
+
+
+.form-signin {
+    max-width: 280px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: beige;
+    border-radius: 10%;
+}
+
+.form-signin .form-signin-heading,
+.form-signin {
+    margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: none;
+    border-left-style: solid;
+    border-color: #000;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-style: none;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-color: #000;
+}
+
+.form-signin-heading {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* STYLE FOR SIDEBAR 
+ */
+
+
+.sidebar {
+    width: 18%;
+    background-color: rgb(199, 208, 208);
+    height: 100%;
+    position: fixed;
+    padding-top: 15px;
+}
+
+.sidebar a {
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: #ffffff;
+    z-index: 999999999999999999999999;
+}
+
+.sidebar a:hover {
+    background-color: beige;
+    color: #000;
+}
+
+.sidebar .divider {
+    height: .5px;
+    width: 100%;
+    background: #e2e2e2;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        display: none;
+        width: 70% !important;
+        background-color: rgb(74, 104, 104);
+        height: 100%;
+        position: fixed;
+        z-index: 999999999999999999999999;
+        padding-top: 20px;
+    }
+}
+
+.content {
+    margin-left: 18%;
+}
+
+.my_profile_picture {
+    width: 30px;
+    height: 30px;
+    ;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid green;
+}
+
+/* Search css */
+/* search css*/
+.search-container {
+    position: relative;
+}
+
+.search-result {
+    position: absolute;
+    background: rgb(196, 167, 167);
+    border: 1px solid gray;
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.active{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(152, 90, 90));
+}

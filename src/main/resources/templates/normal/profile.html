@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{normal/Base :: layout(~{::section})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="container " style="color: aliceblue;">
+            <div class="card-body ">
+                <div class="back conatainer text-center">
+                    <img src="" style="height: 200px;width: 200px;" class="my_profile_picture"
+                        th:src="@{'/image/'+${user.imageUrl}}" alt="profile photo">
+                    <h3 class="mt-3" th:text="'ID: '+${user.id}"></h3>
+                    <h3 class="mt-3" th:text="'Name: '+${user.name}"></h3>
+                    <hr>
+                    <span th:text="'Role: '+${user.role}"></span>
+                    <hr><span th:text="'Enabled: '+${user.enabled}"></span>
+                    <hr><span th:text="'ABOUT: '+${user.about}"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+			$(document).ready(()=>{
+				$('.item').removeClass('active');
+				$('#profile-link').addClass("active");
+			});
+		</script>
+
+    </section>
+</body>
+
+</html>

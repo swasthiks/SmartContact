@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{Base :: layout(~{::section})}" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="conatiner" style="background-color: bisque;">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="my-card mt-1">
+                        <div class="text-center">
+                            <img style="width: 50px;" src="" th:src="@{/image/pen.png}" alt="Image" th:object="${user}">
+                        </div>
+                        <h1 class="text-center">Signup</h1>
+                        <form novalidate th:action="@{/do_register}" method="post">
+                            <div class="form-group mt-1">
+                                <div th:if="${session.message}" class="alert" th:classappend=" ${session.message.type}"
+                                    role="alert">
+                                    <p th:text="${session.message.content}"></p>
+                                    <!-- <th:block th:text="${#session.removeAttribute('message')}"></th:block> -->
+                                </div>
+                                <label for="Name">Name</label>
+                                <input type="text" name="name" class="form-control" id="name_field"
+                                    th:value="${user.name}" placeholder="Enter Name"
+                                    th:classappend="${#fields.hasErrors('user.name')}?'is-invalid':''" />
+                                <div th:each="e : ${#fields.errors('user.name')}" th:text="${e}"
+                                    class="invalid-feedback" id="validationServerUsernameFeedback"></div>
+                            </div>
+                            <div class="form-group mt-1">
+                                <label for="Email">Email</label>
+                                <input type="email" name="email" class="form-control" id="email_field"
+                                    th:value="${user.email}" placeholder="Enter Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input type="password" name="password" class="form-control" id="password_field"
+                                    placeholder="Enter Password" required>
+                            </div>
+                            <div class="form-group mt-1">
+                                <textarea class="form-control" th:value="${user.about}" name="about"
+                                    rows="5">Enter about yourself</textarea>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" name="agreement" class="form-check-input" id="agrrement" />
+                                <label for="agreement">Accept terms and conditions</label>
+                            </div>
+                            <div class=" mt-1 container text-center">
+                                <button type="submit" class=" btn bg-primaryy text-white">Submit</button>
+                                <button type="reset" class=" btn bg-warning ">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+			$(document).ready(()=>{
+				$('.item').removeClass('active');
+				$('#base-signup').addClass("active");
+			});
+		</script>
+
+    </section>
+</body>
+
+</html>

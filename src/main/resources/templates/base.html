@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="layout(content)">
+<link rel="stylesheet" th:href="@{/style.css}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}"></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primaryy">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">SmartContact</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link " id="base-home" aria-current="page" th:href="@{/}">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="base-about" th:href="@{/about}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="base-login" th:href="@{/signin}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="base-signup" th:href="@{/signup}">Signup</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</head>
+
+<div th:replace="${content}">
+</div>
+<body>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

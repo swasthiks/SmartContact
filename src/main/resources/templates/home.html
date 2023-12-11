@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{Base :: layout(~{::section})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="banner justify-content-center align-items-center">
+        <div  class="text-center">
+            <h1 class="font-weight-bold">This is Home</h1>
+            <h2 class="font-weight-bold mt-1">Welcome to SmartContact.com</h2>
+            <button class="btn bg-primary btn-lg text-white">Start</button>
+        </div>
+        <script>
+			$(document).ready(()=>{
+				$('.item').removeClass('active');
+				$('#base-home').addClass("active");
+			});
+		</script>
+
+    </section>
+</body>
+
+</html>
