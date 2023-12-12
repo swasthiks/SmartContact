@@ -6,13 +6,15 @@ body {
     background-color:rgb(143, 32, 32);
 }
 
-.banner {
+.responsive {
     width: 100%;
-    height: 90vh;
+    height: 500px;
+
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, .2)), url(../image/image.jpg);
     background-size: cover;
 }
+
 
 .my-card {
     padding: 10px;
@@ -25,10 +27,8 @@ body {
 }
 
 .fullscreen_bg {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    position: fixed;
-    top: 60px;
+    width: 100%;
+    height: 500px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -72,6 +72,7 @@ body {
 .form-signin .form-control:focus {
     z-index: 2;
 }
+
 
 .form-signin input[type="text"] {
     margin-bottom: -1px;
@@ -145,6 +146,9 @@ body {
         z-index: 999999999999999999999999;
         padding-top: 20px;
     }
+
+
+
 }
 
 .content {

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{Base :: layout(~{::section})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="justify-content-center align-items-center">
+        <div id="fullscreen_bg" class="fullscreen_bg">
+
+            <div class="container">
+                <h1 class="form-signin-heading text-muted">
+                    <div class="alert alert-success" role="alert">
+                        OTP sent successfully
+                </h1>
+            </div>
+            <div class="contentx">
+                <div class="container text-center" th:if="${session.message}">
+                    <div class="alert alert-danger  text-center" role="alert">
+                        <div th:text="${session.message}"></div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="form-signin" method="post" accept="#" th:action="@{/verify-otp}">
+                <div class="form-group">
+                    <input name="otp" type="number" class="form-control" placeholder="Enter OTP here" required=""
+                        autofocus="">
+                    <button class="btn btn-sm btn-success mt-3" type="submit">
+                        Verify
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+        </div>
+        <script>
+            $(document).ready(() => {
+                $('.item').removeClass('active');
+                $('#base-login').addClass("active");
+            });
+        </script>
+
+    </section>
+
+</body>
+
+</html>

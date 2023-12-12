@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" th:replace="~{Base :: layout(~{::section})}">
+<html lang="en" th:replace="~{Base :: layout(~{::section})}" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,10 @@
     <section>
         <div id="fullscreen_bg" class="fullscreen_bg">
 
-            <div class="container">
+        <div class="container">
 
+
+        
                 <form class="form-signin" method="post" accept="#" th:action="@{/dologin}">
                     <h1 class="form-signin-heading text-muted">Sign In</h1>
                     <div th:if="${param.error}" class="alert alert-danger">
@@ -20,6 +22,9 @@
                     </div>
                     <div th:if="${param.logout}" class="alert alert-danger">
                         Successfully Logged out
+                    </div>
+                    <div th:if="${param.change}" class="alert alert-success">
+                        <p th:text="${param.change}"></p>
                     </div>
                     <input type="text" class="form-control" placeholder="Email address" required="" autofocus=""
                         name="username">
@@ -31,6 +36,9 @@
                         <a style="text-decoration:none;color: azure;" href="/signup">
                             Sign UP
                         </a></button>
+                        <div class="container text-center" >
+                            <a href="" th:href="@{/forgot}" style="text-decoration: none;">Forgot password</a>
+                        </div>
                 </form>
 
             </div>

@@ -16,6 +16,7 @@
                         <div class="text-center">
                             <img style="width: 50px;" src="" th:src="@{/image/pen.png}" alt="Image" th:object="${user}">
                         </div>
+
                         <h1 class="text-center">Signup</h1>
                         <form novalidate th:action="@{/do_register}" method="post">
                             <div class="form-group mt-1">
@@ -59,11 +60,11 @@
             </div>
         </div>
         <script>
-			$(document).ready(()=>{
-				$('.item').removeClass('active');
-				$('#base-signup').addClass("active");
-			});
-		</script>
+            $(document).ready(() => {
+                $('.item').removeClass('active');
+                $('#base-signup').addClass("active");
+            });
+        </script>
 
     </section>
 </body>
